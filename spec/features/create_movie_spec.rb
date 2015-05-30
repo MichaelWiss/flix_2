@@ -33,5 +33,8 @@ describe "Creating a new movie" do
     }.not_to change(Movie, :count)
         
     expect(page).to have_text('error')
+
+    expect(page).to have_text('Movie successfully created!')
+    
   end
 end
