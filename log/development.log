@@ -1476,3 +1476,10 @@ Migrating to CreateReviews (20150531215654)
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "movie_id", "name", "stars", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "I'm a better reviewer than he is."], ["created_at", "2015-05-31 22:22:48.421321"], ["movie_id", 1], ["name", "Gene Siskel"], ["stars", 5], ["updated_at", "2015-05-31 22:22:48.421321"]]
   [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"   ORDER BY "movies"."id" ASC LIMIT 1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"   ORDER BY "movies"."id" ASC LIMIT 1
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "movie_id", "name", "stars", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "It's been years since a movie superhero was this fierce and this funny."], ["created_at", "2015-05-31 22:35:12.901367"], ["movie_id", 1], ["name", "Peter Travers"], ["stars", 4], ["updated_at", "2015-05-31 22:35:12.901367"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mMovie Load (2.3ms)[0m  [1mSELECT  "movies".* FROM "movies"   ORDER BY "movies"."id" ASC LIMIT 1[0m
