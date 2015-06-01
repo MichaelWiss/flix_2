@@ -5,6 +5,9 @@
     <h2>Released: <%= @movie.released_on %></h2>
   </header>
 
+  <%= link_to pluralize(@movie.reviews.size, "review"), 
+            movie_reviews_path(@movie) %>
+
   <p>
     <%= @movie.description %>
   </p>
@@ -34,6 +37,7 @@
       <%= link_to 'Delete', @movie, 
                   class: 'button',
                   method: :delete, data: { confirm: 'Are you sure?' } %>
+
     </nav>
   </footer>
 </article>
