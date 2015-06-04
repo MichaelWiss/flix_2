@@ -15,16 +15,7 @@ class Movie < ActiveRecord::Base
 
   validates :rating, inclusion: { in: RATINGS }
 
-  validates :name, presence: true
 
-  validates :comment, length: { minimum: 4 }
-
-  STARS = [1, 2, 3, 4, 5]
-
-  validates :stars, inclusion: {
-    in: STARS,
-  message: "must be between 1 and 5"
-}
   
   def self.released
     where("released_on <= ?", Time.now).order("released_on desc")
