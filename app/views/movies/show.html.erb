@@ -7,6 +7,10 @@
 
   <%= link_to pluralize(@movie.reviews.size, "review"), 
             movie_reviews_path(@movie) %>
+  <h3>Average Review</h3>
+  <p>
+    <%= format_average_stars(@movie) %>
+  </p>
 
   <p>
     <%= @movie.description %>
