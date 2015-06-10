@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Editing a movie" do
   
   it "updates the movie and shows the movie's updated details" do
-    movie = Movie.create(movie_attributes)
+    movie = Movie.create!(movie_attributes)
     
     visit movie_url(movie)
     

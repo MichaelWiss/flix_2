@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Viewing an individual movie" do
   it "shows the movie's details" do
-    movie = Movie.create(movie_attributes)
+    movie = Movie.create!(movie_attributes)
 
     visit movie_url(movie)
 
@@ -17,7 +17,7 @@ describe "Viewing an individual movie" do
   end  
   
   it "shows the total gross if the total gross exceeds $50M" do
-    movie = Movie.create(movie_attributes(total_gross: 60000000))
+    movie = Movie.create!(movie_attributes(total_gross: 60000000))
 
     visit movie_url(movie)
 
@@ -25,7 +25,7 @@ describe "Viewing an individual movie" do
   end
 
   it "shows 'Flop!' if the total gross is less than $50M" do
-    movie = Movie.create(movie_attributes(total_gross: 40000000))
+    movie = Movie.create!(movie_attributes(total_gross: 40000000))
 
     visit movie_url(movie)
 

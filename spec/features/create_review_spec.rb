@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Creating a new review" do 
   it "saves the review" do    
-    movie = Movie.create(movie_attributes)
+    movie = Movie.create!(movie_attributes)
 
     visit movie_url(movie)
     

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Viewing a list of reviews" do
   
   it "shows the reviews for a specific movie" do
-    movie1 = Movie.create(movie_attributes(title: "Iron Man"))
+    movie1 = Movie.create!(movie_attributes(title: "Iron Man"))
     review1 = movie1.reviews.create(review_attributes(name: "Roger Ebert"))
     review2 = movie1.reviews.create(review_attributes(name: "Gene Siskel"))
 
