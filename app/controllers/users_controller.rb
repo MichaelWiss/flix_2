@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   	redirect_to root_url, alert: "Account successfully deleted!"
   end
 
-end
+
 
 
 
@@ -50,3 +50,4 @@ private
  def user_params
 	params.require(:user).permit(:name, :email, :password, :password_confirmation, :username)
  end
+end
