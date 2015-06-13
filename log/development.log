@@ -11788,3 +11788,371 @@ Started GET "/assets/add.png" for 127.0.0.1 at 2015-06-13 17:09:05 -0500
 
 
 Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-06-13 17:09:05 -0500
+
+
+Started POST "/session" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q3XusOjOyijE5pqItfTm0thJutYy92+d7BsCWKzV8BQ=", "email"=>"michael.wiss@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'michael.wiss@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 81ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:38 -0500
+
+
+Started DELETE "/session" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q3XusOjOyijE5pqItfTm0thJutYy92+d7BsCWKzV8BQ="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-06-13 22:26:42.821705')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 117ms (Views: 112.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-06-13 17:26:43 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-06-13 17:26:47 -0500
+
+
+Started POST "/session" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q3XusOjOyijE5pqItfTm0thJutYy92+d7BsCWKzV8BQ=", "email"=>"michael.wiss@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'michael.wiss@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 69ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:51 -0500
+
+
+Started DELETE "/session" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q3XusOjOyijE5pqItfTm0thJutYy92+d7BsCWKzV8BQ="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-06-13 22:26:54.086512')  ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-06-13 17:26:54 -0500
