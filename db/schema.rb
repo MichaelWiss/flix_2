@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150617215716) do
+ActiveRecord::Schema.define(version: 20150619234835) do
+
+  create_table "favorites", force: true do |t|
+    t.integer  "movie_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "favorites", ["movie_id"], name: "index_favorites_on_movie_id"
+  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
 
   create_table "movies", force: true do |t|
     t.string   "title"
