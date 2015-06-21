@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    @fans = @movie.fans
   end
   
   def edit
@@ -43,6 +44,7 @@ class MoviesController < ApplicationController
     @movie.destroy
     redirect_to movies_url, alert: "Movie successfully deleted!"
   end
+
   
 private
 

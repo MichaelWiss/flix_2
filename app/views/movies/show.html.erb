@@ -19,6 +19,10 @@
   <h3 class="no-rule">
     <%= @movie.rating %> &bull; <%= @movie.duration %> 
   </h3>
+
+   <p>
+    <%= pluralize(@fans.size, 'fan') %> 
+  </p>
   
   <h3>Cast</h3>
   <p>
