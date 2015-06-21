@@ -15843,3 +15843,72 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 12:15:30
 
 
 Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-06-21 12:15:30 -0500
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ? LIMIT 1  [["movie_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-06-21 12:25:38 -0500
