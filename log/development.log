@@ -18523,3 +18523,105 @@ Migrating to CreateCharacterizations (20150625200331)
             FROM sqlite_temp_master
             WHERE name='index_reviews_on_movie_id' AND type='index'
 [0m
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."title" = 'Iron Man' LIMIT 1[0m
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "characterizations" ON "genres"."id" = "characterizations"."genre_id" WHERE "characterizations"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."name" = 'Action' LIMIT 1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "characterizations" ON "movies"."id" = "characterizations"."movie_id" WHERE "characterizations"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "characterizations" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-06-25 21:14:22.818398"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2015-06-25 21:14:22.818398"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "characterizations" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-06-25 21:16:49.833336"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2015-06-25 21:16:49.833336"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT "genres".* FROM "genres"  WHERE "genres"."id" IN (1, 8, 10)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "characterizations" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-06-25 21:17:19.272589"], ["genre_id", 8], ["movie_id", 1], ["updated_at", "2015-06-25 21:17:19.272589"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "characterizations" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-06-25 21:17:19.275302"], ["genre_id", 10], ["movie_id", 1], ["updated_at", "2015-06-25 21:17:19.275302"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"  WHERE "genres"."id" IN (1, 10)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "characterizations" WHERE "characterizations"."movie_id" = ? AND "characterizations"."genre_id" = 8  [["movie_id", 1]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "characterizations" WHERE "characterizations"."movie_id" = ? AND "characterizations"."genre_id" IN (1, 1, 10)[0m  [["movie_id", 1]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mGenre Load (0.5ms)[0m  [1mSELECT "genres".* FROM "genres"  WHERE "genres"."id" IN (1, 8, 10)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "characterizations" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-06-25 21:23:17.713809"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2015-06-25 21:23:17.713809"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "characterizations" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-06-25 21:23:17.716790"], ["genre_id", 8], ["movie_id", 1], ["updated_at", "2015-06-25 21:23:17.716790"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "characterizations" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-06-25 21:23:17.718833"], ["genre_id", 10], ["movie_id", 1], ["updated_at", "2015-06-25 21:23:17.718833"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-25 16:29:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-06-25 21:29:18.385543')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (11.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_header.html.erb (59.8ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 151ms (Views: 143.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-06-25 16:29:18 -0500
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-06-25 16:29:18 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-06-25 16:29:18 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-06-25 16:29:18 -0500
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-06-25 16:29:18 -0500
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-06-25 16:29:18 -0500
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2015-06-25 16:29:20 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT  "favorites".* FROM "favorites"  WHERE "favorites"."user_id" = ? AND "favorites"."movie_id" = 6 LIMIT 1  [["user_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 6]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "characterizations" ON "genres"."id" = "characterizations"."genre_id" WHERE "characterizations"."movie_id" = ?  [["movie_id", 6]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?[0m  [["movie_id", 6]]
+  Rendered movies/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 79.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-06-25 16:29:26 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFavorite Load (0.2ms)[0m  SELECT  "favorites".* FROM "favorites"  WHERE "favorites"."user_id" = ? AND "favorites"."movie_id" = 1 LIMIT 1  [["user_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "characterizations" ON "genres"."id" = "characterizations"."genre_id" WHERE "characterizations"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ? LIMIT 1  [["movie_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/show.html.erb within layouts/application (56.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 137ms (Views: 127.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-06-25 16:29:26 -0500
