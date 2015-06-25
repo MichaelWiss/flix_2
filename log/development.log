@@ -18169,3 +18169,85 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-24 14:51:31 
 
 
 Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-06-24 14:51:31 -0500
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2015-06-24 15:46:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFavorite Load (0.8ms)[0m  SELECT  "favorites".* FROM "favorites"  WHERE "favorites"."user_id" = ? AND "favorites"."movie_id" = 6 LIMIT 1  [["user_id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 6]]
+  [1m[35m (0.6ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 6]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?  [["movie_id", 6]]
+  Rendered movies/show.html.erb within layouts/application (81.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_flashes.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 412ms (Views: 324.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-06-24 15:46:13 -0500
