@@ -1,3 +1,5 @@
+<% content_for(:title, @user.name) %>
+
 <article id="user">
   <header>
     <%= profile_image_for(@user) %>
@@ -18,6 +20,7 @@
         </p>
       </li>
     <% end %>
+    <% content_for :side do %>
     <% if @favorite_movies.any? %>
   <h3>Favorite Movies</h3>
   <ul>
@@ -26,6 +29,7 @@
        <%= link_to movie.title, movie %>
      </li>
    <% end %>
+    <% end %>
   </ul>
 <% end %>
   </ol>

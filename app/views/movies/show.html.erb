@@ -1,9 +1,20 @@
+<% content_for(:title, "#{@movie.title} (#{@movie.released_on.year})") %>
+
 <article id="movie" class="movie">
   <header>
     <%= image_for(@movie) %>
     <h1><%= @movie.title %></h1>
     <h2>Released: <%= @movie.released_on %></h2>
   </header>
+
+  <% content_for :side do %>
+    <%= render 'layouts/movie_sidebar_extras' %>
+  <% end %>
+
+
+
+
+
 
   <%= link_to pluralize(@movie.reviews.size, "review"), 
             movie_reviews_path(@movie) %>
@@ -12,12 +23,7 @@
     <%= format_average_stars(@movie) %>
   </p>
 
-  <h3>Genres</h3>
-    <ul>
-     <% @genres.each do |genre| %>
-       <li><%= genre.name %></li>
-     <% end %>
-    </ul>
+  
 
   <p>
     <%= @movie.description %>
@@ -40,22 +46,7 @@
 <% end %>
 
 
-<% content_for :side do %>
- <% if @fans.any? %>
-  <h3>Fans</h3>
-  <ul>
-    <% @fans.each do |user| %>
-      <li>
-      <p>
-      <%= profile_image_for(user, size: 35) %>
 
-      <%= link_to user.name, user %>
-      </p>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-<% end %>
   
   <h3>Cast</h3>
   <p>
