@@ -21385,3 +21385,117 @@ Processing by MoviesController#show as HTML
   Rendered layouts/_sidebar.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 120ms (Views: 115.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-26 20:22:37 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-06-27 01:22:37.883384')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 176ms (Views: 174.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-27 15:30:10 -0500
+
+RuntimeError (Circular dependency detected while autoloading constant PageTitleHelper):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/movies_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/michaelwiss/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/michaelwiss/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/michaelwiss/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/michaelwiss/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-06-27 20:31:07.218707')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 102.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/genres.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-06-27 15:31:07 -0500
