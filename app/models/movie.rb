@@ -28,10 +28,10 @@ class Movie < ActiveRecord::Base
 
   
   scope :released, -> { where("released_on <= ?", Time.now).order(released_on: :desc) }
+
+  scope :hits, -> { where('total_gross >= 300000000').order(total_gross: :desc) }
   
-  def self.hits
-    where('total_gross >= 300000000').order('total_gross desc')
-  end
+  
   
   def self.flops
     where('total_gross < 10000000').order('total_gross asc')

@@ -21845,3 +21845,4 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-27 21:19:32 -0500
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-27 21:19:32 -0500
+  [1m[36mMovie Load (1.7ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-06-29 18:47:24.021147')  ORDER BY "movies"."released_on" DESC[0m
