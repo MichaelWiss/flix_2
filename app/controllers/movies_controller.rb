@@ -4,7 +4,12 @@ class MoviesController < ApplicationController
   
 
   def index
+    case params[:scope]
+    when 'hits'
+      @movies = Movie.hits
+    else
     @movies = Movie.released
+    end
   end
 
   def show
