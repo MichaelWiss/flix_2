@@ -7,8 +7,10 @@ class MoviesController < ApplicationController
     case params[:scope]
     when 'hits'
       @movies = Movie.hits
+    when 'flops'
+      @movies = Movie.flops
     else
-    @movies = Movie.released
+      @movies = Movie.released
     end
   end
 

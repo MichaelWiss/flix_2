@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resource :session
 
  get "movies/filter/hits" => "movies#index", scope: "hits"
+ get "movies/filter/flops" => "movies#index", scope: "flops"
 
   root "movies#index"
   resources :movies do
