@@ -3,16 +3,10 @@ class MoviesController < ApplicationController
      before_action :require_admin, except: [:index, :show]
   
 
-  def index
-    case params[:scope]
-    when 'hits'
-      @movies = Movie.hits
-    when 'flops'
-      @movies = Movie.flops
-    else
-      @movies = Movie.released
+   
+    def index
+      @movies = Movie.send(movies_scope)
     end
-  end
 
   def show
     @movie = Movie.find(params[:id])
@@ -57,11 +51,25 @@ class MoviesController < ApplicationController
     redirect_to movies_url, alert: "Movie successfully deleted!"
   end
 
+  def nav_link_to(text, url)
+     classes = ['button']
+     classes << 'active' if current_page?(url)
+     link_to(text, url, class: classes.join(' '))
+  end
+
   
 private
 
   def movie_params
     params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross, :cast, :director, :duration, :image_file_name, genre_ids: [])
+  end
+
+   def movies_scope
+   if params[:scope].in? %w(hits flops upcoming recent rated released)
+     params[:scope]
+   else
+     :released
+   end
   end
 end
 
