@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :users
   resource :session
 
- 
+ get "movies/filter/hits" => "movies#index", scope: "hits"
 
   root "movies#index"
   resources :movies do

@@ -21846,3 +21846,254 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-06-27 21:19:32 -0500
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-27 21:19:32 -0500
   [1m[36mMovie Load (1.7ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-06-29 18:47:24.021147')  ORDER BY "movies"."released_on" DESC[0m
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.3ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-07-02 02:10:16.514078')  ORDER BY "movies"."released_on" DESC
+  Rendered movies/index.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 168ms (Views: 156.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/genres.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-07-01 21:10:16 -0500
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-07-02 02:11:03.155194')  ORDER BY "movies"."released_on" DESC[0m
+  Rendered movies/index.html.erb within layouts/application (71.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 178.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/genres.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-07-01 21:11:03 -0500
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-07-01 21:11:07 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-07-02 02:11:07.981514')  ORDER BY "movies"."released_on" DESC
+  Rendered movies/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 146ms (Views: 144.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/genres.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-07-01 21:11:08 -0500
