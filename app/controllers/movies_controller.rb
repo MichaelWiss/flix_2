@@ -51,11 +51,7 @@ class MoviesController < ApplicationController
     redirect_to movies_url, alert: "Movie successfully deleted!"
   end
 
-  def nav_link_to(text, url)
-     classes = ['button']
-     classes << 'active' if current_page?(url)
-     link_to(text, url, class: classes.join(' '))
-  end
+ 
 
   
 private
