@@ -25,6 +25,9 @@ class Movie < ActiveRecord::Base
 
   validates :rating, inclusion: { in: RATINGS }
 
+  validates :title, presence: true, uniqueness: true
+  validates :slug, uniqueness: true
+
 
   
   scope :released, -> { where("released_on <= ?", Time.now).order(released_on: :desc) }
@@ -43,6 +46,10 @@ class Movie < ActiveRecord::Base
 
   def average_stars
     reviews.average(:stars)
+  end
+
+  def to_param
+    slug
   end
 
   
