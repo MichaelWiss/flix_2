@@ -1,4 +1,7 @@
 class Movie < ActiveRecord::Base
+   before_validation :generate_slug
+
+
   has_many :reviews, dependent: :destroy
 
   has_many :favorites, dependent: :destroy
@@ -50,6 +53,10 @@ class Movie < ActiveRecord::Base
 
   def to_param
     slug
+  end
+
+  def generate_slug
+      self.slug ||= title.parameterize if title
   end
 
   
